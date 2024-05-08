@@ -47,5 +47,5 @@ void	print_contact(Contact _contact);
 int		do_questions(Contact *contact, std::string _var2fill);
 int		do_all_questions(Contact *contact);
 int		add_data(Contact *contact, std::string _data, std::string _var2fill);
-bool	is_digits(const std::string &str);
+int		msg_and_continue(const char *_str);
 #endif

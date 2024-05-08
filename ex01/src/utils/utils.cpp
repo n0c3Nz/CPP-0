@@ -1,8 +1,12 @@
 #include "phonebook.hpp"
 
-bool is_digits(const std::string &str)
+int msg_and_continue(const char *_str)
 {
-    return str.find_first_not_of("0123456789") == std::string::npos;
+	std::cout << std::endl << "Error: " << _str << std::endl;
+	std::cout << std::endl << "Pulsa ENTER para volver al menú" << std::endl;
+	std::cin.clear();
+	std::getchar();
+	return EXIT_FAILURE;
 }
 
 int do_questions(Contact *contact, std::string _var2fill)
@@ -42,13 +46,21 @@ int add_data(Contact *contact, std::string _data, std::string _var2fill)
 		contact->set_nick_name(_data);
 	else if (_var2fill.compare("tlf") == 0)
 	{
-		if (!is_digits(_data))
-		{
+		try{
+			long long number = std::stoll(_data);
+			if (number < INT_MIN || number > INT_MAX) {
+				std::cout << std::endl << "Error: Número demasiado largo." << std::endl;
+				contact->set_name("Add");
+				return EXIT_FAILURE;
+			}
+			else{
+				int selected = static_cast<int>(number);
+				contact->set_tlf(selected);
+			}
+		} catch (std::invalid_argument& e) {
 			std::cout << std::endl << "Error: Solo se permiten números." << std::endl;
-			contact->set_name("Add");
-			return (EXIT_FAILURE);
+			return EXIT_FAILURE;
 		}
-		contact->set_tlf(std::stoi((_data)));
 	}
 	else if (_var2fill.compare("dark_secret") == 0)
 		contact->set_dark_secret(_data);
