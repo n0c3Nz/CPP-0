@@ -17,6 +17,7 @@ class Contact{
 		std::string		dark_secret;
 	public://Member functions, funciones que pueden acceder a los atributos privates
 		Contact(std::string _name, std::string _lastname, std::string _nickname, int _tlf, std::string _dark_secret);//Método constructor
+		~Contact();//Método destructor
 		std::string     get_name();
 		void			set_name(std::string);
 		std::string     get_last_name();
@@ -35,6 +36,7 @@ class PhoneBook{
 
 	public:
 		PhoneBook(Contact _contact);
+		~PhoneBook();
 		void	add();
 		void	search(std::string);
 		void	exit();

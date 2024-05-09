@@ -6,3 +6,10 @@ PhoneBook::PhoneBook(Contact _contact)
 		contact[i] = new Contact(_contact);
 	}
 }
+
+PhoneBook::~PhoneBook()
+{
+	for (int i = 0; i < 8; i++) {
+		delete contact[i];
+	}
+}
