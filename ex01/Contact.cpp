@@ -1,19 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Contact.cpp                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 17:06:06 by guortun-          #+#    #+#             */
-/*   Updated: 2024/05/20 17:06:07 by guortun-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Contact.hpp"
 #include <cstdlib>
 #include <climits>
-
 bool Contact::isNumber(const std::string& str) const {
     for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
         if (!std::isdigit(*it))
@@ -21,28 +8,22 @@ bool Contact::isNumber(const std::string& str) const {
     }
     return true;
 }
-
 bool Contact::isValidNumber(const std::string& str) const {
     if (str.empty() || str.find_first_not_of(' ') == std::string::npos) {
         return false;
     }
-
     if (!isNumber(str)) return false;
-
     long num = std::strtol(str.c_str(), NULL, 10);
     if (num > INT_MAX || num < INT_MIN) {
         return false;
     }
     return true;
 }
-
 bool Contact::isValidInput(const std::string& str) const {
     return !str.empty() && str.find_first_not_of(' ') != std::string::npos;
 }
-
 void Contact::inputContact() {
     std::string input;
-
     while (true) {
         std::cout << "Enter first name: ";
         if (!std::getline(std::cin, input)) {
@@ -56,7 +37,6 @@ void Contact::inputContact() {
             std::cout << "Invalid input. Please enter a valid first name." << std::endl;
         }
     }
-
     while (true) {
         std::cout << "Enter last name: ";
         if (!std::getline(std::cin, input)) {
@@ -70,7 +50,6 @@ void Contact::inputContact() {
             std::cout << "Invalid input. Please enter a valid last name." << std::endl;
         }
     }
-
     while (true) {
         std::cout << "Enter nickname: ";
         if (!std::getline(std::cin, input)) {
@@ -84,7 +63,6 @@ void Contact::inputContact() {
             std::cout << "Invalid input. Please enter a valid nickname." << std::endl;
         }
     }
-
     while (true) {
         std::cout << "Enter phone number: ";
         if (!std::getline(std::cin, input)) {
@@ -98,7 +76,6 @@ void Contact::inputContact() {
             std::cout << "Invalid phone number. Please enter a valid number." << std::endl;
         }
     }
-
     while (true) {
         std::cout << "Enter darkest secret: ";
         if (!std::getline(std::cin, input)) {
@@ -113,7 +90,6 @@ void Contact::inputContact() {
         }
     }
 }
-
 void Contact::displayContact() const {
     std::cout << "First name: " << firstName << std::endl;
     std::cout << "Last name: " << lastName << std::endl;
@@ -121,15 +97,12 @@ void Contact::displayContact() const {
     std::cout << "Phone number: " << phoneNumber << std::endl;
     std::cout << "Darkest secret: " << darkestSecret << std::endl;
 }
-
 std::string Contact::getFirstName() const {
     return firstName;
 }
-
 std::string Contact::getLastName() const {
     return lastName;
 }
-
 std::string Contact::getNickname() const {
     return nickname;
 }

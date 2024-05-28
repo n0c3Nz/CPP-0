@@ -1,11 +1,9 @@
 #include "phonebook.hpp"
-
 int main(void)
 {
 	Contact Add("Add", "Add", "Add", 0, "none");
 	PhoneBook phonebook(Add);
 	std::string name;
-
 	while (1)
 	{
 		system("clear");

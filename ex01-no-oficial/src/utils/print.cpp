@@ -1,5 +1,4 @@
 #include "phonebook.hpp"
-
 void print_data(std::string _data)
 {
 	if (_data.length() > 10)
@@ -8,7 +7,6 @@ void print_data(std::string _data)
 		std::cout << std::setw(10) << _data;
 	std::cout << "|";
 }
-
 void print_header(void)
 {
 	std::cout << "|" << std::setw(10) << std::right << "Index" << "|";

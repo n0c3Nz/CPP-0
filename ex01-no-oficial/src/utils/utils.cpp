@@ -1,5 +1,4 @@
 #include "phonebook.hpp"
-
 int msg_and_continue(const char *_str)
 {
 	std::cout << std::endl << "Error: " << _str << std::endl;
@@ -8,7 +7,6 @@ int msg_and_continue(const char *_str)
 	std::getchar();
 	return EXIT_FAILURE;
 }
-
 int do_questions(Contact *contact, std::string _var2fill)
 {
 	std::string		_data;
@@ -30,7 +28,6 @@ int do_all_questions(Contact *contact)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
-
 int add_data(Contact *contact, std::string _data, std::string _var2fill)
 {
 	if (_data.length() <= 0){

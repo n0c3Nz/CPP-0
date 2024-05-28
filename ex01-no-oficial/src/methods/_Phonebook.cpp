@@ -1,16 +1,13 @@
 #include "phonebook.hpp"
-
 void PhoneBook::exit()
 {
 	std::cout << std::endl << "Saliendo del programa." << std::endl;
 	std::exit(0);
 }
-
 void PhoneBook::search(std::string _name){
 	int			i = 0;
 	int			found = 0;
 	std::string	input;
-	
 	if (std::strcmp(_name.c_str(), "Add") == 0)
 		return ;
 	if (std::strcmp(_name.c_str(), "All") == 0)
@@ -118,7 +115,6 @@ void PhoneBook::search(std::string _name){
 		return ;
 	}
 }
-
 void PhoneBook::add()
 {
 	static int		nr_2_replace;
