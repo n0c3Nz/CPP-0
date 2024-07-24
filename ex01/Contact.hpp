@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:06:10 by guortun-          #+#    #+#             */
-/*   Updated: 2024/07/24 12:49:40 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:18:50 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <limits>
 #include <cstdlib>
 #include <climits>
+#include <sstream>
+#include <stdexcept>
 
 class Contact {
 private:
@@ -38,5 +40,7 @@ public:
     bool isValidNumber(const std::string& str) const;
     bool isValidInput(const std::string& str) const;
 };
+
+long custom_stol(const std::string &str);
 
 #endif

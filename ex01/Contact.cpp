@@ -6,11 +6,21 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:06:06 by guortun-          #+#    #+#             */
-/*   Updated: 2024/07/24 12:49:27 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:12:21 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
+long custom_stol(const std::string &str) {
+    std::istringstream iss(str);
+    long result;
+    iss >> result;
+    if (iss.fail() || !iss.eof()) {
+        throw std::invalid_argument("Invalid argument for conversion to long");
+    }
+    return result;
+}
 
 bool Contact::isNumber(const std::string& str) const {
     for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {

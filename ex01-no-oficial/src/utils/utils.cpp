@@ -47,7 +47,7 @@ int add_data(Contact *contact, std::string _data, std::string _var2fill)
 	else if (_var2fill.compare("tlf") == 0)
 	{
 		try{
-			long long number = std::stoll(_data);
+			long long number = custom_stoll(_data);
 			if (number < INT_MIN || number > INT_MAX) {
 				std::cout << std::endl << "Error: Número demasiado largo." << std::endl;
 				contact->set_name("Add");

@@ -6,12 +6,14 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:06:17 by guortun-          #+#    #+#             */
-/*   Updated: 2024/07/24 12:49:57 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:19:00 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
+#include <sstream>
+#include <stdexcept>
 
 PhoneBook::PhoneBook() : index(0), count(0) {}
 
@@ -71,7 +73,7 @@ void PhoneBook::searchContacts() const {
 
     long idx;
     try {
-        idx = std::stol(input);
+        idx = custom_stol(input);
     } catch (const std::out_of_range& e) {
         std::cout << "Index out of range. Please enter a valid number." << std::endl;
         return;

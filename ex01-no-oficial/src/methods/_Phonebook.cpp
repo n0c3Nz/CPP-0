@@ -81,7 +81,7 @@ void PhoneBook::search(std::string _name){
 	try {
 		std::cout << std::endl << "Selecciona un contacto [1 - " << j - 1 << "]: ";
 		std::getline(std::cin, input);
-		long long number = std::stoll(input);
+		long long number = custom_stoll(input);
 		if (number < INT_MIN || number > INT_MAX) {
 			msg_and_continue("Número demasiado largo.");
 			return ;
