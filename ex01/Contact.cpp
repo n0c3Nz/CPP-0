@@ -6,13 +6,11 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:06:06 by guortun-          #+#    #+#             */
-/*   Updated: 2024/05/20 17:06:07 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/07/24 12:49:27 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <cstdlib>
-#include <climits>
 
 bool Contact::isNumber(const std::string& str) const {
     for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {

@@ -6,7 +6,7 @@
 #    By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 19:05:21 by guortun-          #+#    #+#              #
-#    Updated: 2024/04/24 22:54:07 by guortun-         ###   ########.fr        #
+#    Updated: 2024/07/24 12:41:51 by guortun-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ_DIR = .obj
-SRC_DIR = ./src
+SRC_DIR = .
 
 SRC = $(shell find $(SRC_DIR) -type f -name '*.cpp')
 

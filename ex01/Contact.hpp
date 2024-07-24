@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:06:10 by guortun-          #+#    #+#             */
-/*   Updated: 2024/05/20 17:06:11 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/07/24 12:49:40 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include <cstdlib>
+#include <climits>
 
 class Contact {
 private:

@@ -6,12 +6,12 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:06:17 by guortun-          #+#    #+#             */
-/*   Updated: 2024/05/20 17:06:18 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/07/24 12:49:57 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <cstdlib>  // Para std::strtol y exit
+
 
 PhoneBook::PhoneBook() : index(0), count(0) {}
 

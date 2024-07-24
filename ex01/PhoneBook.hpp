@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:06:24 by guortun-          #+#    #+#             */
-/*   Updated: 2024/05/20 17:06:25 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/07/24 12:50:10 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
+#include <cstdlib>
 
 class PhoneBook {
 private:
